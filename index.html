@@ -212,8 +212,8 @@
             { title: "Current Time", info: "8:17 AM." },
             { title: "Address of origin", info: "4th St NW, Atlanta, GA 30318." },
             { title: "Address of destination", info: "614 Blue Flag Ln, Fairburn, GA 30213." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "25.45 miles." },
+            { title: "Estimated Time to Destination", info: "44 minutes." },
             { title: "State of Charge of Battery", info: "55% charge." },
             { title: "Range of Current Battery", info: "165 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "124 miles." },
@@ -231,10 +231,10 @@
                 name: 'The Boulevard at Grant Park Apartments',
 
                 location: '1015 Boulevard SE, Atlanta, GA 30312, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '21.52',
+                originTime: '33',
+                destDistance: '6.57',
+                destTime: '23',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Tropical Cuisine',
 
                 location: '4899 Old National Hwy, College Park, GA 30337, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '9.56',
+                originTime: '20',
+                destDistance: '15.89',
+                destTime: '33',
                 
                 waitTime: [
                         { type: 'NACS', value: '0' },
@@ -285,11 +285,11 @@
                     ],
                 chargeTime: [
                         { type: 'NACS', value: '90' },
-                        { type: 'NEMA', value: '250' }
+                        { type: 'NEMA', value: '' }
                     ],
                 socketAvalability: [
                         { type: 'NACS', value: '1' },
-                        { type: 'NEMA', value: '0' }
+                        { type: 'NEMA', value: '1' }
                     ],        
 
                 energySource: '90% grid, 10% renewable',
@@ -939,8 +939,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
